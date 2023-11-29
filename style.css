@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Poppins:wght@400;500;700;900&display=swap');
+
+:root {
+    --primaryIconTextColor: rgb(114, 50, 114);
+    --secondaryIconTextColor: rgb(136, 85, 136);
+
+    --borderButtonColor: #f1f1f1;
+
+    --primaryBackgroundColor: white;
+    --secondaryBackgroundColor: rgb(247, 218, 247);
+
+    --sectionPadding: 4rem 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 strong{
+    color: var(--primaryIconTextColor);
+}
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+p, span, label, input, textarea, li {
+    color: var(--secondaryIconTextColor);
+}
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.logo a {
+    color: var(--primaryIconTextColor);
+}
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+nav ul li a {
+    color: var(--primaryIconTextColor);
+}
+
+.btn {
+    padding: 0.8rem 1.3rem;
+    background-color: var(--primaryBackgroundColor);
+    border: 1.5px solid var(--borderButtonColor);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover {
+    box-shadow: var(--secondaryBackgroundColor) 2px 2px 5px;
+}
+.menu {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    right: 35px;
+    top: 33px;
+}
+.menu div {
+    width: 25px;
+    height: 2px;
+    background-color: var(--primaryIconTextColor);
+    margin: 7px;
+    transition: all, 0.3s;
+    z-index: 99;
+}
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.hero-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+.hero-right img {
+    width: 90%;
+}
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+.pre-title {
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    color:  var(--secondaryIconTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    background-color: var(--borderButtonColor);
+    left: 0;
+}
+
+#services {
+    background: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+}
+.services .pre-title {
+    margin: 0 auto;
+}
+.services-title {
+    text-align: center;
+}
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+.service {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: var(--primaryBackgroundColor);
+    border-radius: 0.7rem;
+}
+.service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+.service-icon {
+    background: var(--secondaryBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem 0.7rem;
+    border-radius: 0.5rem;
+}
+.service-icon svg {
+    fill: var(--secondaryIconTextColor);
+}
+#achievements {
+    padding: var(--sectionPadding);
+}
+.achievement {
+    border-radius: 0.7rem;
+    border: 1px solid var(--secondaryBackgroundColor);
+    overflow: hidden;
+}
+.achievement-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.achievement-info {
+    padding: 2rem 1.5rem;
+}
+.achievement-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.achievement h4 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.achievement-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+.achievement-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--secondaryBackgroundColor);
+    padding: 0.4rem 1rem;
+    color: var(--secondaryIconTextColor);
+}
+
+#skills {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+.education {
+    display: flex;
+    gap: 2rem;
+}
+.education-line {
+    padding: 0 0.7rem;
+}
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--secondaryIconTextColor);
+    position: relative;
+}
+.education-info p{
+    margin:  0.7rem 0 1.4rem;
+}
+.education-years {
+    margin-bottom: 3rem;
+}
+.education .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondaryIconTextColor);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+.skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+#contacts {
+    padding: var(--sectionPadding);
+}
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Poppins";
+    border: 1px solid var(--secondaryBackgroundColor);
+    border-radius: 10px;
+    resize: none;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--primaryIconTextColor);
+}
+.btn-submit:hover {
+    background-color: var(--primaryIconTextColor)
+}
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--secondaryIconTextColor);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.contact-item-icon {
+    background-color: var(--secondaryBackgroundColor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-item-icon svg {
+    fill: var(--secondaryIconTextColor);
+}
+.contact-item-detail {
+    margin-bottom: 0.6rem;
+}
